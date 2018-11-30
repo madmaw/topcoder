@@ -1,0 +1,51 @@
+package madmaw.topcoder.abcpath;
+
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+
+public class ABCPathTest {
+
+    private ABCPath abcPath;
+
+    @Before
+    public void setUp() {
+        this.abcPath = new ABCPath();
+    }
+
+    @Test
+    public void topCoderTestCase0() {
+        Assert.assertEquals(4, this.abcPath.length(new String[]{"ABE", "CFG", "BDH", "ABC"}));
+    }
+
+    @Test
+    public void topCoderTestCase1() {
+        Assert.assertEquals(1, this.abcPath.length(new String[]{"A"}));
+    }
+
+    @Test
+    public void topCoderTestCase2() {
+        Assert.assertEquals(0, this.abcPath.length(new String[]{"BCDEFGHIJKLMNOPQRSTUVWXYZ"}));
+    }
+
+    @Test
+    public void topCoderTestCase3() {
+        Assert.assertEquals(2, this.abcPath.length(new String[]{"C", "D", "B", "A"}));
+    }
+
+    @Test
+    public void topCoderTestCase4() {
+        Assert.assertEquals(19, this.abcPath.length(new String[]{ "KCBVNRXSPVEGUEUFCODMOAXZYWEEWNYAAXRBKGACSLKYRVRKIO", "DIMCZDMFLAKUUEPMPGRKXSUUDFYETKYQGQHNFFEXFPXNYEFYEX", "DMFRPZCBOWGGHYAPRMXKZPYCSLMWVGMINAVRYUHJKBBRONQEXX", "ORGCBHXWMTIKYNLFHYBVHLZFYRPOLLAMBOPMNODWZUBLSQSDZQ", "QQXUAIPSCEXZTTINEOFTJDAOBVLXZJLYOQREADUWWSRSSJXDBV", "PEDHBZOVMFQQDUCOWVXZELSEBAMBRIKBTJSVMLCAABHAQGBWRP", "FUSMGCSCDLYQNIXTSTPJGZKDIAZGHXIOVGAZHYTMIWAIKPMHTJ", "QMUEDLXSREWNSMEWWRAUBFANSTOOJGFECBIROYCQTVEYGWPMTU", "FFATSKGRQJRIQXGAPLTSXELIHXOPUXIDWZHWNYUMXQEOJIAJDH", "LPUTCFHYQIWIYCVOEYHGQGAYRBTRZINKBOJULGYCULRMEOAOFP", "YOBMTVIKVJOSGRLKTBHEJPKVYNLJQEWNWARPRMZLDPTAVFIDTE", "OOBFZFOXIOZFWNIMLKOTFHGKQAXFCRZHPMPKGZIDFNBGMEAXIJ", "VQQFYCNJDQGJPYBVGESDIAJOBOLFPAOVXKPOVODGPFIYGEWITS", "AGVBSRLBUYOULWGFOFFYAAONJTLUWRGTYWDIXDXTMDTUYESDPK", "AAJOYGCBYTMXQSYSPTBWCSVUMNPRGPOEAVVBGMNHBXCVIQQINJ", "SPEDOAHYIDYUJXGLWGVEBGQSNKCURWYDPNXBZCDKVNRVEMRRXC", "DVESXKXPJBPSJFSZTGTWGAGCXINUXTICUCWLIBCVYDYUPBUKTS", "LPOWAPFNDRJLBUZTHYVFHVUIPOMMPUZFYTVUVDQREFKVWBPQFS", "QEASCLDOHJFTWMUODRKVCOTMUJUNNUYXZEPRHYOPUIKNGXYGBF", "XQUPBSNYOXBPTLOYUJIHFUICVQNAWFMZAQZLTXKBPIAKXGBHXX"}));
+    }
+
+    @Test
+    public void topCoderTestCase5() {
+        Assert.assertEquals(3, this.abcPath.length(new String[]{ "EDCCBA", "EDCCBA"}));
+    }
+
+    @Test
+    public void topCoderTestCase6() {
+        Assert.assertEquals(26, this.abcPath.length(new String[]{  "AMNOPA", "ALEFQR", "KDABGS", "AJCHUT", "AAIWVA", "AZYXAA" }));
+    }
+
+}
